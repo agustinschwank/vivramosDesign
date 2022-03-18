@@ -1,0 +1,262 @@
+/* ================================ Global Styles =================================== */
+/* ================================================================================== */
+/* Colores */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121f3d;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+/* === Scrollbar Design Navegacion === */
+/* width */
+.scrollbar-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.scrollbar-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.scrollbar-list::-webkit-scrollbar-thumb {
+  background: #df5925;
+}
+
+/* Handle on hover */
+.scrollbar-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* === Overally Panel === */
+.overally-panel {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ================================= Fonts Styles =================================== */
+/* ================================================================================== */
+@font-face {
+  font-family: "Merriweather-Sans Bold";
+  src: url("../fonts/MerriweatherSans/static/MerriweatherSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* ================================ Header Styles =================================== */
+/* ================================================================================== */
+/* Colores */
+#header {
+  padding: 0px 50px 0px 50px;
+  background: #000d81;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#header .logo {
+  flex-grow: 1;
+  flex-basis: 20%;
+  max-width: 150px;
+}
+#header .logo img {
+  width: 100%;
+  height: auto;
+}
+#header .bars {
+  display: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+#header .bars:hover {
+  color: #df5925;
+}
+#header .desk__list {
+  flex-grow: 1;
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+#header .desk__list .desk__list__button {
+  display: block;
+  list-style: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+#header .desk__list .desk__list__button:hover .desk__list_show {
+  display: block;
+  animation: openShow 300ms linear;
+  border-top: 2px solid red;
+}
+@keyframes openShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#header .desk__list .desk__link {
+  display: block;
+  line-height: 45px;
+  font-family: "Merriweather-Sans Bold", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 400ms;
+}
+#header .desk__list .desk__link:hover {
+  color: #df5925;
+}
+#header .desk__list .desk__list_show {
+  display: none;
+  position: absolute;
+  background: #000d81;
+  margin-left: -10px;
+  width: 200px;
+  z-index: 5000;
+}
+#header .desk__list .desk__list_show .desk__list--inside {
+  list-style: none;
+}
+#header .desk__list .desk__list_show .desk__link--inside {
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 500ms;
+}
+#header .desk__list .desk__list_show .desk__link--inside:hover {
+  background: lightblue;
+}
+
+/* =============================== Menu Navegation ================================== */
+/* ================================================================================== */
+/* Colores */
+.nav {
+  width: 300px;
+  position: fixed;
+  top: 0px;
+  left: -350px;
+  z-index: 10000;
+  background: #ffffff;
+  transition: all 500ms;
+}
+.nav .nav__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 20px 11px 20px;
+  border-bottom: 2px solid #ff0000;
+  background: #000d81;
+}
+.nav .nav__header .nav__title {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+.nav .nav__header .nav__icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.nav .nav__header .nav__icon:hover {
+  color: #df5925;
+}
+.nav .list {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+.nav .list .nav__link {
+  display: block;
+  font-family: "Merriweather-Sans Bold", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 15px 0;
+}
+.nav .list .nav__link:hover {
+  color: orange;
+}
+.nav .list .list__button {
+  list-style: none;
+  width: 100%;
+  padding-left: 20px;
+  overflow: hidden;
+}
+.nav .list .list__button--click {
+  cursor: pointer;
+}
+.nav .list .list__show {
+  width: 95%;
+  margin-left: auto;
+  border-left: 2px solid grey;
+  list-style: none;
+  transition: height 400ms;
+  height: 0px;
+}
+.nav .list .list__show .nav__link--inside {
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+.nav .list .list__show .nav__link--inside:hover {
+  background: lightcyan;
+}
+
+.visible {
+  left: 0px;
+}
+
+/* ================================= Main Styles ==================================== */
+/* ================================================================================== */
+.content {
+  margin: 0px auto;
+  max-width: 1240px;
+  padding: 0px 20px 0px 20px;
+}
+
+.search {
+  background: linear-gradient(90deg, #3d47f5 16.42%, #f13d89 83.44%);
+}
+.search .form {
+  padding: 30px 0px 30px 0px;
+}
+.search .form input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* =================================== ViewPort ===================================== */
+/* ================================================================================== */
+/* Colores */
+/* viewport 900 */
+@media (max-width: 900px) {
+  #header .desk__list {
+    display: none;
+  }
+  #header .bars {
+    display: block;
+  }
+}
+/* Gestion de Ficheros SASS */
+
+/*# sourceMappingURL=styles.css.map */

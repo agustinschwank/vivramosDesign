@@ -1,0 +1,109 @@
+/* ================================ Header Styles =================================== */
+/* ================================================================================== */
+
+/* Colores */
+$OrginalBlue: #000d81;
+$OriginalOrange: #df5925;
+
+
+#header {
+    padding: 0px 50px 0px 50px;
+    background: $OrginalBlue;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        flex-grow: 1;
+        flex-basis: 20%;
+        max-width: 150px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .bars {
+        display: none;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .bars:hover {
+        color: $OriginalOrange;
+    }
+
+    .desk__list {
+        flex-grow: 1;
+        flex-basis: 80%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        .desk__list__button {
+            display: block;
+            list-style: none;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .desk__list__button:hover {
+            .desk__list_show {
+                display: block;
+                animation: openShow 300ms linear;
+                border-top: 2px solid red;
+            }
+            @keyframes openShow {
+                from {
+                    opacity: 0;
+                } to {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .desk__link {
+            display: block;
+            line-height: 45px;
+            font-family: 'Merriweather-Sans Bold', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 400ms;
+        }
+
+        .desk__link:hover {
+            color: $OriginalOrange;
+        }
+
+        .desk__list_show {
+            display: none;
+            position: absolute;
+            background: $OrginalBlue;
+            margin-left: -10px;
+            width: 200px;
+            z-index: 5000;
+
+            .desk__list--inside {
+                list-style: none;
+            }
+
+            .desk__link--inside {
+                padding-left: 10px;
+                padding-right: 10px;
+                transition: all 500ms;
+            }
+            .desk__link--inside:hover {
+                background: lightblue;
+            }
+        }
+    }
+
+}
+
+

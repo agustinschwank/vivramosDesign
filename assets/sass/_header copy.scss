@@ -1,0 +1,94 @@
+/* ================================ Header Styles =================================== */
+/* ================================================================================== */
+
+/* Colores */
+$OrginalBlue: #000d81;
+$OriginalOrange: #df5925;
+
+
+#header {
+    padding: 10px 50px 10px 50px;
+    background: $OrginalBlue;
+    height: 45px;
+
+    .logo {
+        display: block;
+        float: left;
+        margin-left: 20px;
+        max-width: 150px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .bars {
+        display: block;
+        float: left;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .bars:hover {
+        color: $OriginalOrange;
+    }
+
+    .desk__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        .desk__list__button {
+            display: block;
+            list-style: none;
+            margin-right: 15px;
+        }
+
+        .desk__list__button:hover {
+            .desk__list_show {
+                display: block;
+            }
+        }
+
+        .desk__link {
+            display: block;
+            line-height: 27px;
+            font-family: 'Merriweather-Sans Bold', sans-serif;
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 400ms;
+        }
+
+        .desk__link:hover {
+            color: $OriginalOrange;
+        }
+
+        .desk__list_show {
+            display: none;
+            position: absolute;
+            margin-top: 12px;
+            background: $OrginalBlue;
+            width: 200px;
+            padding: 5px;
+            z-index: 5000;
+
+            .desk__list--inside {
+                list-style: none;
+            }
+
+            .desk__link--inside {
+                padding: 5px;
+                transition: all 500ms;
+            }
+            .desk__link--inside:hover {
+                background: lightblue;
+            }
+        }
+    }
+
+}
+
+

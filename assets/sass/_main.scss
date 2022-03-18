@@ -1,0 +1,23 @@
+/* ================================= Main Styles ==================================== */
+/* ================================================================================== */
+
+.content {
+    margin: 0px auto;
+    max-width: 1240px;
+    padding: 0px 20px 0px 20px;
+}
+
+.search {
+    background: linear-gradient(90deg, rgb(61, 71, 245) 16.42%, rgb(241, 61, 137) 83.44%);
+
+    .form {
+        padding: 30px 0px 30px 0px;
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+}
