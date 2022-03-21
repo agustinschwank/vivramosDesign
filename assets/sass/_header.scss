@@ -4,10 +4,17 @@
 /* Colores */
 $OrginalBlue: #000d81;
 $OriginalOrange: #df5925;
+$whitegrey: #eff3f8;
+$white: #ffffff;
+$grey: #cccccc;
+$cardColor: #24385b;
+$cardColorHover: #40587c;
+$fluorPink: #F433FF;
+$fluorBlue: #1589FF;
 
 
 #header {
-    padding: 0px 50px 0px 50px;
+    padding: 0px 40px 0px 40px;
     background: $OrginalBlue;
     height: 45px;
     display: flex;
@@ -91,6 +98,11 @@ $OriginalOrange: #df5925;
 
             .desk__list--inside {
                 list-style: none;
+                border-bottom: 1px solid grey;
+            }
+
+            .desk__list--inside:last-child {
+                border-bottom: none
             }
 
             .desk__link--inside {

@@ -4,6 +4,13 @@
 /* Colores */
 $OrginalBlue: #000d81;
 $OriginalOrange: #df5925;
+$whitegrey: #eff3f8;
+$white: #ffffff;
+$grey: #cccccc;
+$cardColor: #24385b;
+$cardColorHover: #40587c;
+$fluorPink: #F433FF;
+$fluorBlue: #1589FF;
 
 .nav {
     width: 300px;
@@ -11,7 +18,7 @@ $OriginalOrange: #df5925;
     top:0px;
     left: -350px;
     z-index: 10000;
-    background: #ffffff;
+    background: $white;
     transition: all 500ms;
     
 
@@ -21,19 +28,19 @@ $OriginalOrange: #df5925;
         justify-content: space-between;
         align-items: center;
         padding: 11px 20px 11px 20px;
-        border-bottom: 2px solid #ff0000;
+        border-bottom: 2px solid $OriginalOrange;
         background: $OrginalBlue;
 
         .nav__title {
-            font-family: Helvetica, sans-serif;
+            font-family: 'Roboto-Bold', sans-serif;
             font-size: 16px;
-            color: #ffffff;
+            color: $white;
         }
 
         .nav__icon {
             font-size: 24px;
             cursor: pointer;
-            color: #ffffff;
+            color: $white;
         }
 
         .nav__icon:hover {
@@ -47,10 +54,6 @@ $OriginalOrange: #df5925;
         height: 100vh;
         overflow-y: scroll;
         padding-bottom: 50px;
-        //background: #ffffff;
-
-        //display: flex;
-        //flex-direction: column;
 
         .nav__link {
             display: block;
@@ -58,10 +61,11 @@ $OriginalOrange: #df5925;
             font-size: 14px;
             text-decoration: none;
             padding: 15px 0;
+            transition: all 300ms;
         }
 
         .nav__link:hover {
-            color: orange;
+            color: $OriginalOrange;
         }
 
         .list__button {
@@ -78,19 +82,19 @@ $OriginalOrange: #df5925;
         .list__show {
             width: 95%;
             margin-left: auto;
-            border-left: 2px solid grey;
+            border-left: 2px solid $grey;
             list-style: none;
             transition: height 400ms;
             height: 0px;
 
             .nav__link--inside {
-                border-radius: 6px;
                 padding-left: 20px;
                 text-align: left;
+                transition: all 300ms;
             }
 
             .nav__link--inside:hover {
-                background: lightcyan;
+                background: rgb(225, 255, 255);
             }
         }
     }

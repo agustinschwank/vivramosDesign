@@ -4,12 +4,21 @@
 /* Colores */
 $OrginalBlue: #000d81;
 $OriginalOrange: #df5925;
+$whitegrey: #eff3f8;
+$white: #ffffff;
+$grey: #cccccc;
+$cardColor: #24385b;
+$cardColorHover: #40587c;
+$fluorPink: #F433FF;
+$fluorBlue: #1589FF;
 
 
 /* viewport 900 */
 
 @media (max-width:900px) {
     #header {
+        padding: 0px 20px 0px 20px;
+        
         .desk__list {
             display: none;
         }
@@ -18,4 +27,116 @@ $OriginalOrange: #df5925;
             display: block;
         }
     }
+
+    /* === File + Col Control === */
+    .row {
+        justify-content: space-evenly;
+    }
+
+    .col {
+        flex: 0 0 45%;
+    }
+
+    .col-6 {
+        flex: 0 0 100%;
+    }
+
+    /* === Post === */
+    .reading {
+        .row-reading {
+            flex-direction: column;
+
+            .article {
+                flex-basis: 100%;
+                margin-right: 0px;
+
+                .title__article {
+                    font-size: 0.9rem;
+                }
+            }
+            .sidebar {
+                max-width: 350px;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+/* viewport 576 */
+@media (max-width:576px) {
+    /* === File + Col Control === */
+    .row {
+        justify-content: space-between;
+    }
+
+    .col {
+        flex: 0 0 100%;
+    }
+
+    /* === Search Section === */
+    .search {
+        .search__form {
+            .form__content {
+                .search__input {
+                    width: 60%;
+                }
+                .search__button {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    /* === Post === */
+    .reading {
+        .row-reading {
+            flex-direction: column;
+
+            .article {
+                flex-basis: 100%;
+
+                .title__article {
+                    font-size: 0.8rem;
+                }
+
+                .data__article {
+                    flex-direction: column;
+
+                    .data__img {
+                        width: 100%;
+                    }
+
+                    .data_list {
+                        margin-top: 20px;
+                        margin-left: 0px;
+
+                        .data_disc {
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                .data_tracklist {
+                    margin-top: 20px;
+                }
+
+                .data__article--vivramos {
+                    .data__img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .sidebar {
+                max-width: 100%;
+                margin-top: 5px;
+            }
+        }
+    }
+
 }
