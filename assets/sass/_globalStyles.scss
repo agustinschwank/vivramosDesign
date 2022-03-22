@@ -90,6 +90,11 @@ body {
     flex: 0 0 25%;
 }
 
+.col-3 {
+    flex: 0 0 33%;
+    width: 33%;
+}
+
 .col-6 {
     flex: 0 0 49%;
 }
@@ -111,4 +116,39 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-deejays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+/* === Scrollbar VIDEO Navegacion Iframe Section === */
+/* width */
+.scrollbar-videoframe::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.scrollbar-videoframe::-webkit-scrollbar-track {
+    background: transparent; 
+}
+/* Handle */
+.scrollbar-videoframe::-webkit-scrollbar-thumb {
+    background: $cardColorHover; 
+}
+/* Handle on hover */
+.scrollbar-videoframe::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

@@ -38,3 +38,13 @@ overally.addEventListener('click', () => {
     }
 });
 
+
+const list__videoLearning = document.querySelectorAll('#list__video--learning li');
+list__videoLearning.forEach(lisLink => {
+    let link = lisLink.querySelector('.curso__link a');
+    link.addEventListener('click', (event)=>{
+        event.preventDefault();
+        let iframe = document.querySelector('#video__frame--learning');
+        iframe.setAttribute('src', link.getAttribute('href'));
+    });
+});

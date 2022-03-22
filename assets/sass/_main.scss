@@ -75,6 +75,73 @@ $fluorBlue: #1589FF;
     }
 }
 
+/* === News Section === */
+.news {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .news-box {
+        padding: 20px;
+        border: 3px solid $cardColor;
+        border-radius: 8px;
+    }
+
+    .news-box::after {
+        display: block;
+        position: absolute;
+        font-family: 'Lato-Bold', sans-serif;
+        font-size: 24px;
+        content: 'NOTICIAS';
+        top: 175px;
+        color: white;
+        padding: 5px 15px 5px 15px;
+        background: #121f3d;
+    }
+
+    .card__new {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        background: $cardColor;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+
+        .news__img {
+            width: 200px;
+            height: 100px;
+            overflow: hidden;
+            border: 5px;
+            margin-bottom: 0px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @supports (object-fit: cover){
+            .news__img img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .news__title {
+            margin-left: 10px;
+            font-family: 'Roboto-Bold', sans-serif;
+            font-size: 16px;
+            color: $whitegrey;
+            margin-top: 5px;
+        }
+    }
+
+    .card__new:hover {
+        background: $cardColorHover;
+    }
+}
+
 /* === Cards Old Control === */
 .cards__title {
     font-family: 'Lato-Bold', sans-serif;
@@ -197,6 +264,77 @@ $fluorBlue: #1589FF;
         background: $cardColorHover;
         border-right: 10px solid $fluorPink;
         transform: translateY(-10px);
+    }
+}
+
+/* === Cards Deejays Control Zone === */
+.cards__deejays {
+    margin-top: 20px;
+
+    .deejay__card {
+        text-decoration: none;
+        background: $cardColor;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .card__img {
+            min-width: 250px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @supports (object-fit: cover){
+            .card__img img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .card__info {
+            margin-left: 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+
+            a {
+                text-decoration: none;
+            }
+
+            .card__info--title {
+                font-family: 'Roboto-Bold', sans-serif;
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: $whitegrey;
+            }
+
+            .card__info--title:hover {
+                color: $OriginalOrange;
+            }
+
+            .card__info--description {
+                font-family: 'Roboto-Regular', sans-serif;
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: $whitegrey;
+            }
+        }
+    }
+
+    .deejay__card:hover {
+        background: $cardColorHover;
     }
 }
 
@@ -422,5 +560,142 @@ $fluorBlue: #1589FF;
     .f-content {
         padding: 20px;
         color: $whitegrey;
+    }
+}
+
+/* === Learning (Cursos) Control === */
+.learning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .video__learning {
+        flex-grow: 1;
+        flex-basis: 60%;
+        height: calc(100vh - 45px);
+        overflow-y: scroll;
+
+        .video{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .frame {
+                min-width: 100%;
+                height: 500px;
+                overflow: hidden;
+
+                iframe {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            @supports (object-fit: cover){
+                .frame iframe {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+
+
+            .material__info {
+                padding: 40px;
+                width: 100%;
+    
+                .info__description {
+                    h1 {
+                        font-family: 'Lato-Bold', sans-serif;
+                        font-size: 24px;
+                        color: $whitegrey;
+                        margin-bottom: 15px;
+                        margin-top: 10px;
+                        padding-bottom: 4px;
+                        border-bottom: 2px solid $cardColorHover;
+                    }
+
+                    p {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        color: $whitegrey;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: $whitegrey;
+                        margin-top: 5px;
+                    }
+
+                    a:hover {
+                        color: $OriginalOrange;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .video__list {
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: calc(100vh - 45px);
+        overflow-y: scroll;
+
+        .list {
+            padding: 15px 15px 50px 15px;
+
+            h1 {
+                font-family: 'Lato-Bold', sans-serif;
+                font-size: 24px;
+                color: $whitegrey;
+                margin-bottom: 10px;
+                padding-bottom: 4px;
+                border-bottom: 2px solid $cardColorHover;
+            }
+
+            .list--curso {
+                background: $cardColor;
+                border-radius: 5px;
+                padding: 10px;
+
+                .curso__link {
+                    list-style: none;
+                    margin-bottom: 5px;
+        
+                    a {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: $whitegrey;
+                        margin-top: 5px;
+                    }
+        
+                    a:hover {
+                        color: $OriginalOrange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* === Section About Us === */
+.about {
+    margin-top: 40px;
+
+    .about__info {
+        padding: 15px;
+        border-radius: 10px;
+        background: $cardColorHover;
+        color: $whitegrey;
+
+        li {
+            margin-left: 30px;
+        }
     }
 }

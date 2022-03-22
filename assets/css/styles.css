@@ -74,6 +74,11 @@ body {
   flex: 0 0 25%;
 }
 
+.col-3 {
+  flex: 0 0 33%;
+  width: 33%;
+}
+
 .col-6 {
   flex: 0 0 49%;
 }
@@ -95,6 +100,42 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-deejays {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* === Scrollbar VIDEO Navegacion Iframe Section === */
+/* width */
+.scrollbar-videoframe::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.scrollbar-videoframe::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.scrollbar-videoframe::-webkit-scrollbar-thumb {
+  background: #40587c;
+}
+
+/* Handle on hover */
+.scrollbar-videoframe::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* ================================= Fonts Styles =================================== */
@@ -353,6 +394,65 @@ body {
   background: #df5925;
 }
 
+/* === News Section === */
+.news {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.news .news-box {
+  padding: 20px;
+  border: 3px solid #24385b;
+  border-radius: 8px;
+}
+.news .news-box::after {
+  display: block;
+  position: absolute;
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 24px;
+  content: "NOTICIAS";
+  top: 175px;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  background: #121f3d;
+}
+.news .card__new {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #24385b;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.news .card__new .news__img {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  border: 5px;
+  margin-bottom: 0px;
+}
+.news .card__new .news__img img {
+  width: 100%;
+  height: auto;
+}
+@supports (object-fit: cover) {
+  .news .card__new .news__img img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.news .card__new .news__title {
+  margin-left: 10px;
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 16px;
+  color: #eff3f8;
+  margin-top: 5px;
+}
+.news .card__new:hover {
+  background: #40587c;
+}
+
 /* === Cards Old Control === */
 .cards__title {
   font-family: "Lato-Bold", sans-serif;
@@ -460,6 +560,65 @@ body {
   background: #40587c;
   border-right: 10px solid #F433FF;
   transform: translateY(-10px);
+}
+
+/* === Cards Deejays Control Zone === */
+.cards__deejays {
+  margin-top: 20px;
+}
+.cards__deejays .deejay__card {
+  text-decoration: none;
+  background: #24385b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cards__deejays .deejay__card .card__img {
+  min-width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cards__deejays .deejay__card .card__img img {
+  width: 100%;
+  height: auto;
+}
+@supports (object-fit: cover) {
+  .cards__deejays .deejay__card .card__img img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.cards__deejays .deejay__card .card__info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+.cards__deejays .deejay__card .card__info a {
+  text-decoration: none;
+}
+.cards__deejays .deejay__card .card__info .card__info--title {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #eff3f8;
+}
+.cards__deejays .deejay__card .card__info .card__info--title:hover {
+  color: #df5925;
+}
+.cards__deejays .deejay__card .card__info .card__info--description {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #eff3f8;
+}
+.cards__deejays .deejay__card:hover {
+  background: #40587c;
 }
 
 /* === Reading Post Control === */
@@ -654,6 +813,120 @@ body {
   color: #eff3f8;
 }
 
+/* === Learning (Cursos) Control === */
+.learning {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.learning .video__learning {
+  flex-grow: 1;
+  flex-basis: 60%;
+  height: calc(100vh - 45px);
+  overflow-y: scroll;
+}
+.learning .video__learning .video {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.learning .video__learning .video .frame {
+  min-width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.learning .video__learning .video .frame iframe {
+  width: 100%;
+  height: auto;
+}
+@supports (object-fit: cover) {
+  .learning .video__learning .video .frame iframe {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.learning .video__learning .video .material__info {
+  padding: 40px;
+  width: 100%;
+}
+.learning .video__learning .video .material__info .info__description h1 {
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 24px;
+  color: #eff3f8;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #40587c;
+}
+.learning .video__learning .video .material__info .info__description p {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  color: #eff3f8;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.learning .video__learning .video .material__info .info__description a {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #eff3f8;
+  margin-top: 5px;
+}
+.learning .video__learning .video .material__info .info__description a:hover {
+  color: #df5925;
+}
+.learning .video__list {
+  flex-grow: 1;
+  flex-basis: 40%;
+  height: calc(100vh - 45px);
+  overflow-y: scroll;
+}
+.learning .video__list .list {
+  padding: 15px 15px 50px 15px;
+}
+.learning .video__list .list h1 {
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 24px;
+  color: #eff3f8;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #40587c;
+}
+.learning .video__list .list .list--curso {
+  background: #24385b;
+  border-radius: 5px;
+  padding: 10px;
+}
+.learning .video__list .list .list--curso .curso__link {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.learning .video__list .list .list--curso .curso__link a {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #eff3f8;
+  margin-top: 5px;
+}
+.learning .video__list .list .list--curso .curso__link a:hover {
+  color: #df5925;
+}
+
+/* === Section About Us === */
+.about {
+  margin-top: 40px;
+}
+.about .about__info {
+  padding: 15px;
+  border-radius: 10px;
+  background: #40587c;
+  color: #eff3f8;
+}
+.about .about__info li {
+  margin-left: 30px;
+}
+
 /* ================================ Footer Styles =================================== */
 /* ================================================================================== */
 /* Colores */
@@ -723,6 +996,44 @@ body {
     margin-left: 0px;
     margin-top: 20px;
   }
+
+  /* === Card Deejays === */
+  .cards__deejays .deejay__card {
+    flex-direction: column;
+  }
+  .cards__deejays .deejay__card .card__img {
+    width: 100%;
+    height: auto;
+  }
+  .cards__deejays .deejay__card .card__info {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+
+  .col-3 {
+    flex: 0 0 100%;
+  }
+
+  .news .card__new {
+    margin-bottom: 20px;
+  }
+  .news .card__new:last-child {
+    margin-bottom: 0px;
+  }
+
+  /* === Learning === */
+  .learning .video__learning {
+    flex-basis: 50%;
+  }
+  .learning .video__learning .video .frame {
+    height: 300px;
+  }
+  .learning .video__learning .video .material__info {
+    padding: 20px;
+  }
+  .learning .video__list {
+    flex-basis: 50%;
+  }
 }
 /* viewport 576 */
 @media (max-width: 576px) {
@@ -775,6 +1086,25 @@ body {
   .reading .row-reading .sidebar {
     max-width: 100%;
     margin-top: 5px;
+  }
+
+  /* === Learning === */
+  .learning .video__learning {
+    flex-basis: 100%;
+    height: 100%;
+    overflow-y: unset;
+  }
+  .learning .video__learning .video .frame {
+    padding: 0px;
+    height: 280px;
+  }
+  .learning .video__learning .video .material__info {
+    padding: 20px;
+  }
+  .learning .video__list {
+    height: 100%;
+    flex-basis: 100%;
+    overflow-y: unset;
   }
 }
 /* Gestion de Ficheros SASS */
