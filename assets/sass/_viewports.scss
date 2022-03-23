@@ -113,6 +113,17 @@ $fluorBlue: #1589FF;
             flex-basis: 50%;
         }
     }
+
+    /* === PreFooter === */
+    .prefooter {
+        text-align: center;
+        .prefooter__contacto{
+            margin-top: 20px;
+        }
+        .prefooter__links {
+            margin-top: 20px;
+        }
+    }
 }
 
 
@@ -211,6 +222,11 @@ $fluorBlue: #1589FF;
             overflow-y:unset;
         }
 
+    }
+
+    /* === PreFooter === */
+    .prefooter {
+        text-align: start;
     }
 
 }

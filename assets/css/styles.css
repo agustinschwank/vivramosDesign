@@ -117,6 +117,12 @@ body {
   justify-content: space-between;
 }
 
+.row-prefooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /* === Scrollbar VIDEO Navegacion Iframe Section === */
 /* width */
 .scrollbar-videoframe::-webkit-scrollbar {
@@ -927,12 +933,179 @@ body {
   margin-left: 30px;
 }
 
+/* === Section Contact === */
+.contacto {
+  margin-top: 40px;
+}
+.contacto .box__contact .alert {
+  background: #5da732;
+  padding: 15px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  color: #eff3f8;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.contacto .box__contact .alert-succes {
+  background: #5da732;
+}
+.contacto .box__contact .alert-danger {
+  background: #c90c0c;
+}
+.contacto .box__contact h1 {
+  font-family: "Lato-Bold", sans-serif;
+  font-size: 24px;
+  color: #eff3f8;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contacto .box__contact .form__contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contacto .box__contact .form__contact .form-group {
+  margin-bottom: 20px;
+}
+.contacto .box__contact .form__contact .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+}
+.contacto .box__contact .form__contact .form-group textarea {
+  width: 100%;
+  height: 200px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  resize: none;
+}
+.contacto .box__contact .form__contact .form-group input:focus {
+  box-shadow: 0px 0px 8px 2px #cccccc inset;
+  outline: none;
+}
+.contacto .box__contact .form__contact .form-group textarea:focus {
+  box-shadow: 0px 0px 8px 2px #cccccc inset;
+  outline: none;
+}
+.contacto .box__contact .form__contact .form-buttom {
+  text-align: center;
+  margin-top: 40px;
+}
+.contacto .box__contact .form__contact .form-buttom input {
+  padding: 15px 80px 15px 80px;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #cccccc;
+}
+.contacto .box__contact .form__contact .form-buttom input:hover {
+  color: #ffffff;
+  background: #df5925;
+}
+
+/* == Pagination Web === */
+.paginacion {
+  text-align: center;
+}
+.paginacion .pagination {
+  height: 36px;
+  margin: 18px 0;
+}
+.paginacion .pagination ul {
+  border-radius: 3px 3px 3px 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.paginacion .pagination li {
+  display: inline;
+}
+.paginacion .pagination a {
+  color: #ffffff;
+  border: 1px solid #24385b;
+  float: left;
+  line-height: 34px;
+  padding: 0 14px;
+  text-decoration: none;
+  background: #1589FF;
+}
+.paginacion .pagination a:hover, .paginacion .pagination .active a {
+  background-color: #df5925;
+}
+.paginacion .pagination .active a {
+  color: #ffffff;
+  cursor: default;
+}
+.paginacion .pagination .disabled a, .paginacion .pagination .disabled a:hover {
+  background-color: transparent;
+  color: #999999;
+  cursor: default;
+}
+.paginacion .pagination li:first-child a {
+  border-left-width: 1px;
+  border-radius: 3px 0 0 3px;
+}
+.paginacion .pagination li:last-child a {
+  border-radius: 0 3px 3px 0;
+}
+.paginacion .pagination-centered {
+  text-align: center;
+}
+.paginacion .pagination-right {
+  text-align: right;
+}
+
 /* ================================ Footer Styles =================================== */
 /* ================================================================================== */
 /* Colores */
-.footer {
-  margin-top: 40px;
+.prefooter {
+  margin-top: 60px;
+  padding: 30px 0px 30px 0px;
+  background: #24385b;
 }
+.prefooter h3 {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: #eff3f8;
+  margin-bottom: 15px;
+}
+.prefooter p {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 8px;
+}
+.prefooter i {
+  padding-right: 15px;
+}
+.prefooter .prefooter__links ul li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+.prefooter .prefooter__links ul a {
+  text-decoration: none;
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #cccccc;
+}
+.prefooter .prefooter__links ul a:hover {
+  color: #df5925;
+}
+
 .footer .info {
   font-family: "Lato-Bold", sans-serif;
   font-size: 14px;
@@ -1034,6 +1207,17 @@ body {
   .learning .video__list {
     flex-basis: 50%;
   }
+
+  /* === PreFooter === */
+  .prefooter {
+    text-align: center;
+  }
+  .prefooter .prefooter__contacto {
+    margin-top: 20px;
+  }
+  .prefooter .prefooter__links {
+    margin-top: 20px;
+  }
 }
 /* viewport 576 */
 @media (max-width: 576px) {
@@ -1105,6 +1289,11 @@ body {
     height: 100%;
     flex-basis: 100%;
     overflow-y: unset;
+  }
+
+  /* === PreFooter === */
+  .prefooter {
+    text-align: start;
   }
 }
 /* Gestion de Ficheros SASS */
