@@ -84,32 +84,35 @@ $fluorBlue: #1589FF;
         padding: 20px;
         border: 3px solid $cardColor;
         border-radius: 8px;
-    }
 
-    .news-box::after {
-        display: block;
-        position: absolute;
-        font-family: 'Lato-Bold', sans-serif;
-        font-size: 24px;
-        content: 'NOTICIAS';
-        top: 175px;
-        color: white;
-        padding: 5px 15px 5px 15px;
-        background: #121f3d;
+        &::after{
+            display: block;
+            position: absolute;
+            font-family: 'Lato-Bold', sans-serif;
+            font-size: 24px;
+            content: 'NOTICIAS';
+            top: 175px;
+            color: white;
+            padding: 5px 15px 5px 15px;
+            background: #121f3d;
+        }
     }
 
     .card__new {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+
         background: $cardColor;
         padding: 5px;
         text-decoration: none;
         border-radius: 5px;
+        height: 110px;
 
         .news__img {
-            width: 200px;
-            height: 100px;
+            max-width: 130px;
+            min-width: 130px;
+            height: 100%;
             overflow: hidden;
             border: 5px;
             margin-bottom: 0px;
@@ -135,10 +138,10 @@ $fluorBlue: #1589FF;
             color: $whitegrey;
             margin-top: 5px;
         }
-    }
-
-    .card__new:hover {
-        background: $cardColorHover;
+        
+        &:hover {
+            background: $cardColorHover;
+        }
     }
 }
 
@@ -199,14 +202,13 @@ $fluorBlue: #1589FF;
                 color: $whitegrey;
             }
         }
-    }
 
-    .vivramos__card:hover {
-        background: $cardColorHover;
-        transform: translateY(-20px);
-
-        .card__image {
-            background: linear-gradient(0deg, $cardColorHover, $fluorPink) ;
+        &:hover{
+            background: $cardColorHover;
+            transform: translateY(-20px);
+            .card__image {
+                background: linear-gradient(0deg, $cardColorHover, $fluorPink) ;
+            }
         }
     }
 }
@@ -258,12 +260,12 @@ $fluorBlue: #1589FF;
                 font-size: 16px;
             }
         }
-    }
 
-    .card__disco:hover {
-        background: $cardColorHover;
-        border-right: 10px solid $fluorPink;
-        transform: translateY(-10px);
+        &:hover{
+            background: $cardColorHover;
+            border-right: 10px solid $fluorPink;
+            transform: translateY(-10px);
+        }
     }
 }
 
@@ -331,10 +333,10 @@ $fluorBlue: #1589FF;
                 color: $whitegrey;
             }
         }
-    }
 
-    .deejay__card:hover {
-        background: $cardColorHover;
+        &:hover {
+            background: $cardColorHover;
+        }
     }
 }
 
@@ -472,56 +474,49 @@ $fluorBlue: #1589FF;
                 color: $whitegrey;
                 z-index: 1;
                 text-decoration: none;
-            }
-               
-            .btn-new-download-grad:before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%) scaleY(1) scaleX(1.25);
-                top: 100%;
-                width: 140%;
-                height: 180%;
-                background-color: rgba(0, 0, 0, 0.05);
-                border-radius: 50%;
-                display: block;
-                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-                z-index: -1;
-            }
-            
-            .btn-new-download-grad:after {
-                content: "";
-                position: absolute;
-                left: 55%;
-                transform: translateX(-50%) scaleY(1) scaleX(1.45);
-                top: 180%;
-                width: 160%;
-                height: 190%;
-                background-color: $fluorPink;
-                border-radius: 50%;
-                display: block;
-                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-                z-index: -1;
-            }
-            
-            .btn-new-download-grad:hover {
-                color: $cardColor;
-                border: 1px solid $fluorPink;
-            }
-            
-            .btn-new-download-grad:hover:before {
-                top: -35%;
-                background-color: $fluorPink;
-                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-            }
-            
-            .btn-new-download-grad:hover:after {
-                top: -45%;
-                background-color: $fluorPink;
-                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+                    top: 100%;
+                    width: 140%;
+                    height: 180%;
+                    background-color: rgba(0, 0, 0, 0.05);
+                    border-radius: 50%;
+                    display: block;
+                    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                    z-index: -1;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 55%;
+                    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+                    top: 180%;
+                    width: 160%;
+                    height: 190%;
+                    background-color: $fluorPink;
+                    border-radius: 50%;
+                    display: block;
+                    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: $cardColor;
+                    border: 1px solid $fluorPink;
+                }
+
+                &:hover::before{
+                    top: -45%;
+                    background-color: $fluorPink;
+                    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+                }
             }
         }
-    
     }
     
     .sidebar {
@@ -629,10 +624,10 @@ $fluorBlue: #1589FF;
                         text-decoration: none;
                         color: $whitegrey;
                         margin-top: 5px;
-                    }
 
-                    a:hover {
-                        color: $OriginalOrange;
+                        &:hover{
+                            color: $OriginalOrange;
+                        }
                     }
                 }
             }
@@ -713,7 +708,7 @@ $fluorBlue: #1589FF;
             font-size: 16px;
             color: $whitegrey;
             margin-bottom: 40px;
-            border-radius: 10px;
+            border-radius: 5px;
         }
 
         .alert-succes {
@@ -747,7 +742,13 @@ $fluorBlue: #1589FF;
                     border-radius: 5px;
                     font-family: 'Roboto-Regular', sans-serif;
                     font-size: 16px;
+
+                    &:focus{
+                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        outline: none;
+                    }
                 }
+
                 textarea {
                     width: 100%;
                     height: 200px;
@@ -757,16 +758,11 @@ $fluorBlue: #1589FF;
                     font-family: 'Roboto-Regular', sans-serif;
                     font-size: 16px;
                     resize: none;
-                }
 
-                input:focus {
-                    box-shadow: 0px 0px 8px 2px $grey inset;
-                    outline: none;
-                }
-
-                textarea:focus {
-                    box-shadow: 0px 0px 8px 2px $grey inset;
-                    outline: none;
+                    &:focus{
+                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        outline: none;
+                    }
                 }
             }
 
@@ -782,17 +778,16 @@ $fluorBlue: #1589FF;
                     border: none;
                     cursor: pointer;
                     background: $grey;
-                }
 
-                input:hover {
-                    color: $white;
-                    background: $OriginalOrange;
+                    &:hover {
+                        color: $white;
+                        
+                    }
                 }
             }
         }
     }
 }
-
 
 /* == Pagination Web === */
 .paginacion {

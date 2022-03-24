@@ -38,10 +38,10 @@ $fluorBlue: #1589FF;
         color: #ffffff;
         font-size: 24px;
         cursor: pointer;
-    }
 
-    .bars:hover {
-        color: $OriginalOrange;
+        &:hover {
+            color: $OriginalOrange;
+        }
     }
 
     .desk__list {
@@ -57,19 +57,19 @@ $fluorBlue: #1589FF;
             list-style: none;
             padding-right: 10px;
             padding-left: 10px;
-        }
 
-        .desk__list__button:hover {
-            .desk__list_show {
-                display: block;
-                animation: openShow 300ms linear;
-                border-top: 2px solid red;
-            }
-            @keyframes openShow {
-                from {
-                    opacity: 0;
-                } to {
-                    opacity: 1;
+            &:hover {
+                .desk__list_show {
+                    display: block;
+                    animation: openShow 300ms linear;
+                    border-top: 2px solid red;
+                }
+                @keyframes openShow {
+                    from {
+                        opacity: 0;
+                    } to {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -82,10 +82,10 @@ $fluorBlue: #1589FF;
             color: #ffffff;
             text-decoration: none;
             transition: all 400ms;
-        }
 
-        .desk__link:hover {
-            color: $OriginalOrange;
+            &:hover {
+                color: $OriginalOrange;
+            }
         }
 
         .desk__list_show {
@@ -99,19 +99,20 @@ $fluorBlue: #1589FF;
             .desk__list--inside {
                 list-style: none;
                 border-bottom: 1px solid grey;
-            }
 
-            .desk__list--inside:last-child {
-                border-bottom: none
+                &:last-child {
+                    border-bottom: none
+                }
             }
 
             .desk__link--inside {
                 padding-left: 10px;
                 padding-right: 10px;
                 transition: all 500ms;
-            }
-            .desk__link--inside:hover {
-                background: lightblue;
+
+                &:hover {
+                    background: lightblue;
+                }
             }
         }
     }

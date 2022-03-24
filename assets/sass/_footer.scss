@@ -50,9 +50,10 @@ $fluorBlue: #1589FF;
                 font-weight: 100;
                 font-size: 14px;
                 color: $grey;
-            }
-            a:hover {
-                color: $OriginalOrange;
+
+                &:hover {
+                    color: $OriginalOrange;
+                }
             }
         }
     }
@@ -71,10 +72,9 @@ $fluorBlue: #1589FF;
             text-decoration: none;
             color: rgb(173, 255, 47);
 
-        }
-        .info__link:hover {
-            color: $OriginalOrange;
-            
+            &:hover {
+                color: $OriginalOrange;
+            }
         }
     }
 }
