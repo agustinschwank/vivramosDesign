@@ -10,7 +10,10 @@ $grey: #cccccc;
 $cardColor: #24385b;
 $cardColorHover: #40587c;
 $fluorPink: #F433FF;
+$purple: #BA10C9;
+$darkBlue:#1d4f7c;
 $fluorBlue: #1589FF;
+$green: #98ca3f;
 
 
 * {
@@ -61,7 +64,7 @@ body {
 
 
 .borderline {
-    border: 3px solid #24385b;
+    border: 3px solid $darkBlue;
     border-radius: 10px;
     padding: 15px 0px 15px 0px;
 }
@@ -90,6 +93,11 @@ body {
     flex: 0 0 25%;
 }
 
+.col-3 {
+    flex: 0 0 33%;
+    width: 33%;
+}
+
 .col-6 {
     flex: 0 0 49%;
 }
@@ -111,4 +119,46 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-deejays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* === Post Readin Flex === */
+.row-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.row-prefooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+
+/* === Scrollbar VIDEO Navegacion Iframe Section === */
+/* width */
+.scrollbar-videoframe::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.scrollbar-videoframe::-webkit-scrollbar-track {
+    background: transparent; 
+}
+/* Handle */
+.scrollbar-videoframe::-webkit-scrollbar-thumb {
+    background: $cardColorHover; 
+}
+/* Handle on hover */
+.scrollbar-videoframe::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

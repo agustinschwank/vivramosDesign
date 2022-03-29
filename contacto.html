@@ -14,7 +14,6 @@
     </head>
     <body>
 
-        <!-- Header Navegation -->
         <header id="header">
             <div id="open_menu" class="bars">
                 <i class="fa-solid fa-bars" title="Menu"></i>
@@ -63,9 +62,8 @@
                 <li class="desk__list__button"><a href="contacto.html" class="desk__link">Contacto</a></li>
             </ul>
         </header>
-        <!-- End Header Navegation -->
 
-        <!-- Movile Navigation -->
+        <!-- Navigation -->
         <nav id="navegation" class="nav">
             <div class="nav__header">
                 <p class="nav__title">MENU</p>
@@ -114,190 +112,39 @@
             </ul>
         </nav>
         <div id="overally"></div>
-        <!-- End Movile Navigation -->
+        <!-- End Navigation -->
 
         <div class="main">
-            <!-- Search Section -->
-            <section class="search">
+
+            <!-- Contacto -->
+            <section class="contacto">
                 <div class="content">
-                    <form class="search__form" method="POST" action="#">
-                        <div class="form__content">
-                            <input class="search__input" type="text" name="search" id="search" placeholder="Buscar discos de Artistas"/>
-                            <input class="search__button" type="submit" name="search" value="Buscar"/>
+                    <div class="box__contact">
+                        <h1>Contactanos y nos comunicaremos a la brevedad</h1>
+                        <div class="alert alert-danger">
+                            <p>Tu mensaje a sido enviado con exito! Nos contactaremos a la brevedad.</p>
                         </div>
-                    </form>
-                </div>
-            </section>
-            <div class="clearfix"></div>
-            <!-- End Search Section -->
-            <!-- Section Noticias -->
-            <section class="news">
-                <div class="content">
-                    <div id="news_api" class="news-box row-news">
-                        <a class="col-3 card__new" href="#">
-                            <div class="news__img">
-                                <img src="https://placeimg.com/300/300/any" alt="name"/>
+                        <form class="form__contact" action="#" method="POST">
+                            <div class="col-6 form-group">
+                                <input type="text" name="nombre" placeholder="Nombre Completo"/>
                             </div>
-                            <div class="news__title">Tomorrowland lazo su nueva aplicacion para dispositivos moviles.</div>
-                        </a>
-                        <a class="col-3 card__new" href="#">
-                            <div class="news__img">
-                                <img src="https://placeimg.com/300/300/any" alt="name"/>
+                            <div class="col-6 form-group">
+                                <input type="text" name="email" placeholder="E-mail"/>
                             </div>
-                            <div class="news__title">Tomorrowland lazo su nueva aplicacion para dispositivos moviles.</div>
-                        </a>
-                        <a class="col-3 card__new" href="#">
-                            <div class="news__img">
-                                <img src="https://placeimg.com/300/300/any" alt="name"/>
+                            <div class="col-12 form-group">
+                                <input type="text" name="asunto" placeholder="Asunto"/>
                             </div>
-                            <div class="news__title">Tomorrowland lazo su nueva aplicacion para dispositivos moviles.</div>
-                        </a>
+                            <div class="col-12 form-group">
+                                <textarea name="mensaje" placeholder="Texto Aqui.."></textarea>
+                            </div>
+                            <div class="col-12 form-buttom">
+                                <input type="submit" name="NewEmail" value="ENVIAR MENSAJE"/>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
-            <!-- End Section Noticias -->
-            <!-- Vivramos Cards -->
-            <section class="cards__vivramos">
-                <div class="content">
-                    <div class="cards__title">
-                        <h1>VIVRAMOS - DISCOS OFICIALES RECIENTES</h1>
-                        <p>Disfruta de una experiencia única, con la mejor musica para Radios y Dj's.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col vivramos__card">
-                            <a class="card__link" href="#">
-                                <div class="card__image opacidad">
-                                    <img src="https://placeimg.com/300/300/any"/>
-                                </div>
-                                <div class="card__info">
-                                    <p>Elementary vol 3</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col vivramos__card">
-                            <a class="card__link" href="#">
-                                <div class="card__image">
-                                    <img src="https://placeimg.com/300/300/any"/>
-                                </div>
-                                <div class="card__info">
-                                    <p>Elementary vol 3</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col vivramos__card">
-                            <a class="card__link" href="#">
-                                <div class="card__image">
-                                    <img src="https://placeimg.com/300/300/any"/>
-                                </div>
-                                <div class="card__info">
-                                    <p>Elementary vol 3</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col vivramos__card">
-                            <a class="card__link" href="#">
-                                <div class="card__image">
-                                    <img src="https://placeimg.com/300/300/any"/>
-                                </div>
-                                <div class="card__info">
-                                    <p>Elementary vol 3</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Vivramos Cards -->
-            <!-- Card Discos -->
-            <section class="cards__discos">
-                <div class="content">
-                    <div class="cards__title">
-                        <h1>ULTIMOS DISCOS ORIGINALES AGREGADOS</h1>
-                        <p>Los discos completos de tus artistas favoritos.</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a class="card__link" href="#">
-                                <div class=" card__disco">
-                                    <div class="card__image">
-                                        <img src="https://via.placeholder.com/300x300"/>
-                                    </div>
-                                    <div class="card__info">
-                                        <p class="artist">Los Palmeras</p>
-                                        <p class="namedisc">Lo que quiere la chola</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Card Discos -->
+            <!-- End Contacto -->
         </div>
 
         <!-- Pre Footer -->
@@ -337,6 +184,5 @@
 
         <!-- Scripts -->
         <script src="./assets/js/nav.js"></script>
-        <!--<script src="./apiNoticias.js"></script>-->
     </body>
 </html>

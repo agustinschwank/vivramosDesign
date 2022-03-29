@@ -64,6 +64,66 @@ $fluorBlue: #1589FF;
             }
         }
     }
+
+    /* === Card Deejays === */
+    .cards__deejays {
+        .deejay__card {
+            flex-direction: column;
+
+            .card__img {
+                width: 100%;
+                height: auto;
+            }
+
+            .card__info {
+                margin-top: 20px;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .col-3 {
+        flex: 0 0 100%;
+    }
+
+    .news {
+        .card__new {
+            margin-bottom: 20px;
+        }
+        .card__new:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    /* === Learning === */
+    .learning {
+        .video__learning {
+            flex-basis: 50%;
+            .video {
+                .frame {
+                    height: 300px;
+                }
+                .material__info {
+                    padding: 20px;
+                }
+            }
+        }
+
+        .video__list {
+            flex-basis: 50%;
+        }
+    }
+
+    /* === PreFooter === */
+    .prefooter {
+        text-align: center;
+        .prefooter__contacto{
+            margin-top: 20px;
+        }
+        .prefooter__links {
+            margin-top: 20px;
+        }
+    }
 }
 
 
@@ -137,6 +197,36 @@ $fluorBlue: #1589FF;
                 margin-top: 5px;
             }
         }
+    }
+
+    /* === Learning === */
+    .learning {
+        .video__learning {
+            flex-basis: 100%;
+            height: 100%;
+            overflow-y:unset;
+            .video {
+                .frame {
+                    padding: 0px;
+                    height: 280px;
+                }
+                .material__info {
+                    padding: 20px;
+                }
+            }
+        }
+
+        .video__list {
+            height: 100%;
+            flex-basis: 100%;
+            overflow-y:unset;
+        }
+
+    }
+
+    /* === PreFooter === */
+    .prefooter {
+        text-align: start;
     }
 
 }

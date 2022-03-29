@@ -10,7 +10,10 @@ $grey: #cccccc;
 $cardColor: #24385b;
 $cardColorHover: #40587c;
 $fluorPink: #F433FF;
+$purple: #BA10C9;
+$darkBlue:#1d4f7c;
 $fluorBlue: #1589FF;
+$green: #98ca3f;
 
 
 .content {
@@ -75,6 +78,76 @@ $fluorBlue: #1589FF;
     }
 }
 
+/* === News Section === */
+.news {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .news-box {
+        padding: 20px;
+        border: 3px solid $darkBlue;
+        border-radius: 8px;
+
+        &::after{
+            display: block;
+            position: absolute;
+            font-family: 'Lato-Bold', sans-serif;
+            font-size: 24px;
+            content: 'NOTICIAS';
+            top: 175px;
+            color: white;
+            padding: 5px 15px 5px 15px;
+            background: #121f3d;
+        }
+    }
+
+    .card__new {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        background: $cardColor;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+        height: 110px;
+
+        .news__img {
+            max-width: 130px;
+            min-width: 130px;
+            height: 100%;
+            overflow: hidden;
+            border: 5px;
+            margin-bottom: 0px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @supports (object-fit: cover){
+            .news__img img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .news__title {
+            margin-left: 10px;
+            font-family: 'Roboto-Bold', sans-serif;
+            font-size: 16px;
+            color: $whitegrey;
+            margin-top: 5px;
+        }
+        
+        &:hover {
+            background: $cardColorHover;
+        }
+    }
+}
+
 /* === Cards Old Control === */
 .cards__title {
     font-family: 'Lato-Bold', sans-serif;
@@ -132,14 +205,13 @@ $fluorBlue: #1589FF;
                 color: $whitegrey;
             }
         }
-    }
 
-    .vivramos__card:hover {
-        background: $cardColorHover;
-        transform: translateY(-20px);
-
-        .card__image {
-            background: linear-gradient(0deg, $cardColorHover, $fluorPink) ;
+        &:hover{
+            background: $cardColorHover;
+            transform: translateY(-20px);
+            .card__image {
+                background: linear-gradient(0deg, $cardColorHover, $fluorPink) ;
+            }
         }
     }
 }
@@ -191,12 +263,83 @@ $fluorBlue: #1589FF;
                 font-size: 16px;
             }
         }
-    }
 
-    .card__disco:hover {
-        background: $cardColorHover;
-        border-right: 10px solid $fluorPink;
-        transform: translateY(-10px);
+        &:hover{
+            background: $cardColorHover;
+            border-right: 10px solid $fluorPink;
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* === Cards Deejays Control Zone === */
+.cards__deejays {
+    margin-top: 20px;
+
+    .deejay__card {
+        text-decoration: none;
+        background: $cardColor;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .card__img {
+            min-width: 250px;
+            height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @supports (object-fit: cover){
+            .card__img img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+
+        .card__info {
+            margin-left: 15px;
+
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+
+            a {
+                text-decoration: none;
+            }
+
+            .card__info--title {
+                font-family: 'Roboto-Bold', sans-serif;
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: $whitegrey;
+            }
+
+            .card__info--title:hover {
+                color: $OriginalOrange;
+            }
+
+            .card__info--description {
+                font-family: 'Roboto-Regular', sans-serif;
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: $whitegrey;
+            }
+        }
+
+        &:hover {
+            background: $cardColorHover;
+        }
     }
 }
 
@@ -334,56 +477,49 @@ $fluorBlue: #1589FF;
                 color: $whitegrey;
                 z-index: 1;
                 text-decoration: none;
-            }
-               
-            .btn-new-download-grad:before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%) scaleY(1) scaleX(1.25);
-                top: 100%;
-                width: 140%;
-                height: 180%;
-                background-color: rgba(0, 0, 0, 0.05);
-                border-radius: 50%;
-                display: block;
-                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-                z-index: -1;
-            }
-            
-            .btn-new-download-grad:after {
-                content: "";
-                position: absolute;
-                left: 55%;
-                transform: translateX(-50%) scaleY(1) scaleX(1.45);
-                top: 180%;
-                width: 160%;
-                height: 190%;
-                background-color: $fluorPink;
-                border-radius: 50%;
-                display: block;
-                transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-                z-index: -1;
-            }
-            
-            .btn-new-download-grad:hover {
-                color: $cardColor;
-                border: 1px solid $fluorPink;
-            }
-            
-            .btn-new-download-grad:hover:before {
-                top: -35%;
-                background-color: $fluorPink;
-                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-            }
-            
-            .btn-new-download-grad:hover:after {
-                top: -45%;
-                background-color: $fluorPink;
-                transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+                    top: 100%;
+                    width: 140%;
+                    height: 180%;
+                    background-color: rgba(0, 0, 0, 0.05);
+                    border-radius: 50%;
+                    display: block;
+                    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                    z-index: -1;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 55%;
+                    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+                    top: 180%;
+                    width: 160%;
+                    height: 190%;
+                    background-color: $fluorPink;
+                    border-radius: 50%;
+                    display: block;
+                    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: $cardColor;
+                    border: 1px solid $fluorPink;
+                }
+
+                &:hover::before{
+                    top: -45%;
+                    background-color: $fluorPink;
+                    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+                }
             }
         }
-    
     }
     
     .sidebar {
@@ -421,6 +557,320 @@ $fluorBlue: #1589FF;
 
     .f-content {
         padding: 20px;
+        color: $whitegrey;
+    }
+}
+
+/* === Learning (Cursos) Control === */
+.learning {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .video__learning {
+        flex-grow: 1;
+        flex-basis: 60%;
+        height: calc(100vh - 45px);
+        overflow-y: scroll;
+
+        .video{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .frame {
+                min-width: 100%;
+                height: 500px;
+                overflow: hidden;
+
+                iframe {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            @supports (object-fit: cover){
+                .frame iframe {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+
+
+            .material__info {
+                padding: 40px;
+                width: 100%;
+    
+                .info__description {
+                    h1 {
+                        font-family: 'Lato-Bold', sans-serif;
+                        font-size: 24px;
+                        color: $whitegrey;
+                        margin-bottom: 15px;
+                        margin-top: 10px;
+                        padding-bottom: 4px;
+                        border-bottom: 2px solid $cardColorHover;
+                    }
+
+                    p {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        color: $whitegrey;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: $whitegrey;
+                        margin-top: 5px;
+
+                        &:hover{
+                            color: $OriginalOrange;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .video__list {
+        flex-grow: 1;
+        flex-basis: 40%;
+        height: calc(100vh - 45px);
+        overflow-y: scroll;
+
+        .list {
+            padding: 15px 15px 50px 15px;
+
+            h1 {
+                font-family: 'Lato-Bold', sans-serif;
+                font-size: 24px;
+                color: $whitegrey;
+                margin-bottom: 10px;
+                padding-bottom: 4px;
+                border-bottom: 2px solid $cardColorHover;
+            }
+
+            .list--curso {
+                background: $cardColor;
+                border-radius: 5px;
+                padding: 10px;
+
+                .curso__link {
+                    list-style: none;
+                    margin-bottom: 5px;
+        
+                    a {
+                        font-family: 'Roboto-Regular', sans-serif;
+                        font-size: 18px;
+                        text-decoration: none;
+                        color: $whitegrey;
+                        margin-top: 5px;
+                    }
+        
+                    a:hover {
+                        color: $OriginalOrange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* === Section About Us === */
+.about {
+    margin-top: 40px;
+
+    .about__info {
+        padding: 15px;
+        border-radius: 10px;
+        background: $cardColorHover;
+        color: $whitegrey;
+
+        li {
+            margin-left: 30px;
+        }
+    }
+}
+
+/* === Section Contact === */
+.contacto {
+    margin-top: 40px;
+
+    .box__contact {
+
+        .alert {
+            background: #5da732;
+            padding: 15px;
+            font-family: 'Roboto-Regular',sans-serif;
+            font-size: 16px;
+            color: $whitegrey;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .alert-succes {
+            background: #5da732;
+        }
+        .alert-danger {
+            background: #c90c0c;
+        }
+
+        h1 {
+            font-family: 'Lato-Bold', sans-serif;
+            font-size: 24px;
+            color: $whitegrey;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form__contact {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .form-group {
+                margin-bottom: 20px;
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    font-family: 'Roboto-Regular', sans-serif;
+                    font-size: 16px;
+
+                    &:focus{
+                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        outline: none;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 200px;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-family: 'Roboto-Regular', sans-serif;
+                    font-size: 16px;
+                    resize: none;
+
+                    &:focus{
+                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        outline: none;
+                    }
+                }
+            }
+
+            .form-buttom {
+                text-align: center;
+                margin-top: 40px;
+                input {
+                    padding: 15px 80px 15px 80px;
+                    font-family: 'Roboto-Regular', sans-serif;
+                    font-size: 18px;
+                    letter-spacing: 3px;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    background: $grey;
+
+                    &:hover {
+                        color: $white;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* == Pagination Web === */
+.paginacion {
+    text-align: center;
+    .pagination {
+        height: 36px;
+        margin: 18px 0;
+        
+    }
+    .pagination ul {
+        border-radius: 3px 3px 3px 3px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .pagination li {
+        display: inline;
+    }
+    .pagination a {
+        color: $white;
+        border: 1px solid $cardColor;
+        float: left;
+        line-height: 34px;
+        padding: 0 14px;
+        text-decoration: none;
+        background: $fluorBlue;
+    }
+    .pagination a:hover, .pagination .active a {
+        background-color: $OriginalOrange;
+    }
+    .pagination .active a {
+        color: $white;
+        cursor: default;
+    }
+    .pagination .disabled a, .pagination .disabled a:hover {
+        background-color: transparent;
+        color: #999999;
+        cursor: default;
+    }
+    .pagination li:first-child a {
+        border-left-width: 1px;
+        border-radius: 3px 0 0 3px;
+    }
+    .pagination li:last-child a {
+        border-radius: 0 3px 3px 0;
+    }
+    .pagination-centered {
+        text-align: center;
+    }
+    .pagination-right {
+        text-align: right;
+    }
+}
+
+/* === Error 404 === */
+.error {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        width: 50%;
+        height: auto;
+    }
+
+    h1 {
+        font-family: 'Lato-Bold';
+        font-size: 36px;
+        color: $whitegrey;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: 'Roboto-Regular';
+        font-size: 20px;
         color: $whitegrey;
     }
 }
