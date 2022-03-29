@@ -49,7 +49,7 @@ body {
 }
 
 .borderline {
-  border: 3px solid #24385b;
+  border: 3px solid #1d4f7c;
   border-radius: 10px;
   padding: 15px 0px 15px 0px;
 }
@@ -407,7 +407,7 @@ body {
 }
 .news .news-box {
   padding: 20px;
-  border: 3px solid #24385b;
+  border: 3px solid #1d4f7c;
   border-radius: 8px;
 }
 .news .news-box::after {
@@ -1062,6 +1062,33 @@ body {
   text-align: right;
 }
 
+/* === Error 404 === */
+.error {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.error .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error img {
+  width: 50%;
+  height: auto;
+}
+.error h1 {
+  font-family: "Lato-Bold";
+  font-size: 36px;
+  color: #eff3f8;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.error p {
+  font-family: "Roboto-Regular";
+  font-size: 20px;
+  color: #eff3f8;
+}
+
 /* ================================ Footer Styles =================================== */
 /* ================================================================================== */
 /* Colores */
@@ -1107,12 +1134,12 @@ body {
   font-size: 14px;
   padding: 10px;
   color: #ffffff;
-  background: #000d81;
+  background: #1d4f7c;
   text-align: center;
 }
 .footer .info .info__link {
   text-decoration: none;
-  color: greenyellow;
+  color: #98ca3f;
 }
 .footer .info .info__link:hover {
   color: #df5925;

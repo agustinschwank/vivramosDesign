@@ -10,7 +10,10 @@ $grey: #cccccc;
 $cardColor: #24385b;
 $cardColorHover: #40587c;
 $fluorPink: #F433FF;
+$purple: #BA10C9;
+$darkBlue:#1d4f7c;
 $fluorBlue: #1589FF;
+$green: #98ca3f;
 
 
 * {
@@ -61,7 +64,7 @@ body {
 
 
 .borderline {
-    border: 3px solid #24385b;
+    border: 3px solid $darkBlue;
     border-radius: 10px;
     padding: 15px 0px 15px 0px;
 }

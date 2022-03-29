@@ -32,4 +32,3 @@ fetch('https://agustinschwank.com.ar/app/api/', {headers: {"Accept": "applicatio
                                                 .then(datos => datos.json())
                                                 .then(datos => getNoticias(datos));
                                                 //.catch(error => getError());
-
