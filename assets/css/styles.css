@@ -974,7 +974,7 @@ body {
   font-size: 16px;
 }
 .contacto .box__contact .form__contact .form-group input:focus {
-  box-shadow: 0px 0px 8px 2px #cccccc inset;
+  box-shadow: 0px 0px 6px #c90c0c inset;
   outline: none;
 }
 .contacto .box__contact .form__contact .form-group textarea {
@@ -988,7 +988,7 @@ body {
   resize: none;
 }
 .contacto .box__contact .form__contact .form-group textarea:focus {
-  box-shadow: 0px 0px 8px 2px #cccccc inset;
+  box-shadow: 0px 0px 6px #c90c0c inset;
   outline: none;
 }
 .contacto .box__contact .form__contact .form-buttom {
@@ -1317,6 +1317,12 @@ body {
   /* === PreFooter === */
   .prefooter {
     text-align: start;
+  }
+
+  /* === Contacto === */
+  .contacto .box__contact .form__contact .form-buttom input {
+    padding: 15px 20px 15px 20px;
+    letter-spacing: 1px;
   }
 }
 /* Gestion de Ficheros SASS */

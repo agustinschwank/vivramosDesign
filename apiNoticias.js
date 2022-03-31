@@ -28,7 +28,7 @@ const getNoticias = (noticias) => {
     contentNoticia.innerHTML = plantilla;
 };
 
-fetch('https://agustinschwank.com.ar/app/api/', {headers: {"Accept": "application/json"}})
+fetch('https://url.com/api', {headers: {"Accept": "application/json"}})
                                                 .then(datos => datos.json())
-                                                .then(datos => getNoticias(datos));
-                                                //.catch(error => getError());
+                                                .then(datos => getNoticias(datos))
+                                                .catch(error => getError());
