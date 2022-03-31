@@ -747,7 +747,7 @@ $green: #98ca3f;
                     font-size: 16px;
 
                     &:focus{
-                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        box-shadow: 0px 0px 6px #c90c0c inset;
                         outline: none;
                     }
                 }
@@ -763,7 +763,7 @@ $green: #98ca3f;
                     resize: none;
 
                     &:focus{
-                        box-shadow: 0px 0px 8px 2px $grey inset;
+                        box-shadow: 0px 0px 6px #c90c0c inset;
                         outline: none;
                     }
                 }

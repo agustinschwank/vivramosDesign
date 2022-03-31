@@ -229,4 +229,20 @@ $fluorBlue: #1589FF;
         text-align: start;
     }
 
+
+    /* === Contacto === */
+    .contacto {
+        .box__contact {
+            .form__contact {
+                .form-buttom {
+                    input {
+                        padding: 15px 20px 15px 20px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+    
+
 }
