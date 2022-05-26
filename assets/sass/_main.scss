@@ -80,25 +80,34 @@ $green: #98ca3f;
 
 /* === News Section === */
 .news {
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 40px;
 
-    .news-box {
-        padding: 20px;
-        border: 3px solid $darkBlue;
-        border-radius: 8px;
+    .master__news {
+        background: $darkBlue;
+        border-radius: 0px 10px 10px 10px;
 
         &::after{
             display: block;
             position: absolute;
             font-family: 'Lato-Bold', sans-serif;
             font-size: 24px;
-            content: 'NOTICIAS';
-            top: 175px;
+            content: 'ULTIMAS NOTICIAS';
+            top: 185px;
             color: white;
-            padding: 5px 15px 5px 15px;
-            background: #121f3d;
+            padding: 5px 25px 5px 25px;
+            border: 3px solid $darkBlue;
+            border-bottom: none;
+            border-radius: 10px 10px 0px 0px;
+            background: $darkBlue;
         }
+    }
+
+    .news-box {
+        padding: 10px;
+        background: #121f3d;
+        border: 3px solid $darkBlue;
+        border-radius: 0px 10px 10px 10px;
     }
 
     .card__new {
@@ -110,7 +119,7 @@ $green: #98ca3f;
         padding: 5px;
         text-decoration: none;
         border-radius: 5px;
-        height: 110px;
+        height: 140px;
 
         .news__img {
             max-width: 130px;
